@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Flipkart</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f1f3f6;
+        }
+
+
+        /* HEADER */
+
+        .header {
+            background-color: #2874f0;
+            height: 75px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 70px;
+            gap: 25px;
+        }
+
+
+        /* FLIPKART LOGO */
+
+        .logo {
+            background-color: #ffe500;
+
+            width: 160px;
+            height: 55px;
+
+            border-radius: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 12px;
+        }
+
+        .f {
+            color: #2874f0;
+
+            font-size: 45px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .logo-name {
+            color: #172337;
+
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+
+        /* SEARCH */
+
+        .search {
+            width: 600px;
+            height: 42px;
+
+            border: none;
+
+            padding-left: 20px;
+
+            font-size: 16px;
+        }
+
+
+        /* LOGIN */
+
+        .login {
+            background-color: white;
+
+            color: #2874f0;
+
+            padding: 12px 40px;
+
+            font-weight: bold;
+
+            font-size: 16px;
+        }
+
+
+        .seller {
+            color: white;
+
+            font-weight: bold;
+
+            font-size: 16px;
+        }
+
+
+        .more {
+            color: white;
+
+            font-weight: bold;
+
+            font-size: 16px;
+        }
+
+
+        .cart {
+            color: white;
+
+            font-weight: bold;
+
+            font-size: 16px;
+        }
+
+
+        /* CATEGORY SECTION */
+
+        .categories {
+            background-color: white;
+
+            height: 150px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 70px;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+
+        .category {
+            text-align: center;
+
+            font-size: 18px;
+
+            font-weight: bold;
+        }
+
+
+        .category img {
+            width: 80px;
+
+            height: 80px;
+
+            object-fit: cover;
+
+            display: block;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* BANNER */
+
+        .banner {
+            width: 95%;
+
+            height: 400px;
+
+            margin: 20px auto;
+
+            position: relative;
+
+            background-image: url("https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=1600");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .banner-text {
+            position: absolute;
+
+            top: 100px;
+
+            left: 80px;
+        }
+
+
+        .banner-text h1 {
+            color: #2874f0;
+
+            font-size: 50px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .banner-text p {
+            font-size: 20px;
+
+            color: black;
+        }
+
+
+        .shop {
+            background-color: #ff9f00;
+
+            color: white;
+
+            border: none;
+
+            padding: 14px 35px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+        }
+
+
+        /* PRODUCT SECTION */
+
+        .section {
+            width: 92%;
+
+            background-color: white;
+
+            margin: 20px auto;
+
+            padding: 25px;
+        }
+
+
+        .section-heading {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .section-heading h2 {
+            font-size: 28px;
+
+            margin: 0;
+        }
+
+
+        .view {
+            background-color: #2874f0;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            font-size: 15px;
+        }
+
+
+        /* PRODUCTS */
+
+        .products {
+            display: flex;
+
+            gap: 35px;
+
+            margin-top: 30px;
+        }
+
+
+        .product {
+            width: 200px;
+
+            text-align: center;
+        }
+
+
+        .product img {
+            width: 180px;
+
+            height: 200px;
+
+            object-fit: contain;
+        }
+
+
+        .product h3 {
+            font-size: 17px;
+
+            margin: 10px 0;
+        }
+
+
+        .offer {
+            color: green;
+
+            font-weight: bold;
+        }
+
+
+        /* FOOTER */
+
+        .footer {
+            background-color: #172337;
+
+            color: white;
+
+            padding: 40px 80px;
+
+            display: flex;
+
+            justify-content: space-between;
+        }
+
+
+        .footer h3 {
+            color: #878787;
+        }
+
+
+        .footer p {
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <span class="f">f</span>
+
+            <span class="logo-name">
+                Flipkart
+            </span>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <input
+            class="search"
+            type="text"
+            placeholder="Search for products, brands and more"
+        >
+
+
+        <!-- LOGIN -->
+
+        <div class="login">
+            Login
+        </div>
+
+
+        <!-- SELLER -->
+
+        <div class="seller">
+            Become a Seller
+        </div>
+
+
+        <!-- MORE -->
+
+        <div class="more">
+            More
+        </div>
+
+
+        <!-- CART -->
+
+        <div class="cart">
+            🛒 Cart
+        </div>
+
+    </div>
+
+
+
+    <!-- CATEGORIES -->
+
+    <div class="categories">
+
+
+        <div class="category">
+
+            <img
+                src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=200"
+            >
+
+            Mobiles
+
+        </div>
+
+
+        <div class="category">
+
+            <img
+                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200"
+            >
+
+            Electronics
+
+        </div>
+
+
+        <div class="category">
+
+            <img
+                src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=200"
+            >
+
+            Fashion
+
+        </div>
+
+
+        <div class="category">
+
+            <img
+                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=200"
+            >
+
+            Home
+
+        </div>
+
+
+        <div class="category">
+
+            <img
+                src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200"
+            >
+
+            Beauty
+
+        </div>
+
+
+        <div class="category">
+
+            <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200"
+            >
+
+            Footwear
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- BANNER -->
+
+    <div class="banner">
+
+
+        <div class="banner-text">
+
+            <h1>
+                Big Saving Days
+            </h1>
+
+
+            <p>
+                Best deals on top products
+            </p>
+
+
+            <button class="shop">
+                SHOP NOW
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- BEST OF ELECTRONICS -->
+
+    <div class="section">
+
+
+        <div class="section-heading">
+
+
+            <h2>
+                Best of Electronics
+            </h2>
+
+
+            <div class="view">
+                VIEW ALL
+            </div>
+
+
+        </div>
+
+
+        <div class="products">
+
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400"
+                >
+
+                <h3>
+                    Smartphones
+                </h3>
+
+                <p class="offer">
+                    Min. 20% Off
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400"
+                >
+
+                <h3>
+                    Laptops
+                </h3>
+
+                <p class="offer">
+                    Min. 30% Off
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400"
+                >
+
+                <h3>
+                    Headphones
+                </h3>
+
+                <p class="offer">
+                    Special Price
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"
+                >
+
+                <h3>
+                    Watches
+                </h3>
+
+                <p class="offer">
+                    Up to 70% Off
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400"
+                >
+
+                <h3>
+                    Earphones
+                </h3>
+
+                <p class="offer">
+                    From ₹499
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TOP DEALS -->
+
+    <div class="section">
+
+
+        <div class="section-heading">
+
+            <h2>
+                Top Deals
+            </h2>
+
+
+            <div class="view">
+                VIEW ALL
+            </div>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=400"
+                >
+
+                <h3>
+                    Fashion
+                </h3>
+
+                <p class="offer">
+                    Min. 50% Off
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"
+                >
+
+                <h3>
+                    Shoes
+                </h3>
+
+                <p class="offer">
+                    Min. 40% Off
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=400"
+                >
+
+                <h3>
+                    Home Products
+                </h3>
+
+                <p class="offer">
+                    From ₹299
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400"
+                >
+
+                <h3>
+                    Beauty Products
+                </h3>
+
+                <p class="offer">
+                    Up to 60% Off
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <img
+                    src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"
+                >
+
+                <h3>
+                    Watches
+                </h3>
+
+                <p class="offer">
+                    From ₹499
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+
+        <div>
+
+            <h3>
+                ABOUT
+            </h3>
+
+            <p>
+                Contact Us
+            </p>
+
+            <p>
+                About Us
+            </p>
+
+            <p>
+                Careers
+            </p>
+
+            <p>
+                Flipkart Stories
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                HELP
+            </h3>
+
+            <p>
+                Payments
+            </p>
+
+            <p>
+                Shipping
+            </p>
+
+            <p>
+                Cancellation
+            </p>
+
+            <p>
+                Returns
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                CONSUMER POLICY
+            </h3>
+
+            <p>
+                Return Policy
+            </p>
+
+            <p>
+                Terms Of Use
+            </p>
+
+            <p>
+                Privacy
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                SOCIAL
+            </h3>
+
+            <p>
+                Facebook
+            </p>
+
+            <p>
+                Twitter
+            </p>
+
+            <p>
+                YouTube
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
